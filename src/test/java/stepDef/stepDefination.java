@@ -22,7 +22,7 @@ public class stepDefination extends Setup {
 	@Before
 	public void startTest() { // happen before each test scenario
 		driverType = "ch";
-		envData = "stg";
+		envData = "prd";
 		driver = setupBrowser(driverType);
 		switch (envData) {
 		case "qa":
@@ -32,12 +32,12 @@ public class stepDefination extends Setup {
 			url = "https://www.google.com/";
 			break;
 		case "prd":
-			url = "http://demo.guru99.com/test/newtours/register.php";
+			url = "https://www.makemytrip.com/";
 
 			break;
 
 		}
-		//driver.get(url);
+		driver.get(url);
 	}
 
 	@After
